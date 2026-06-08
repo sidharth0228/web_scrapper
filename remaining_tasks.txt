@@ -1,0 +1,27 @@
+Remaining Tasks for Business Intelligence Platform Upgrade:
+
+PHASE 1: Real Data Integration
+- Create core/wiki_scraper.py (Wikipedia Unicorns scraper)
+- Update config.py (Add DATA_SOURCE switch + new paths)
+- Update scraper.py (Source abstraction entry point)
+
+PHASE 2: Business Intelligence Features
+- Create enrichment.py (Company Type, Region, Tags, Category pipeline)
+
+PHASE 3: Search Engine
+- Create search_companies.py (CLI search with argparse)
+
+PHASE 4: Analytics Dashboard
+- Create analytics.py (Matplotlib charts → reports/)
+
+PHASE 5: Investor Matching Demo
+- Create investor_matcher.py (Weighted scoring engine)
+
+PHASE 6: Export System
+- Create exporter.py (CSV / Excel / JSON to exports/)
+
+PHASE 7 & 8: Documentation & Portfolio Polish
+- Run full pipeline and verify output
+- Confirm all exports generated in exports/
+- Confirm all charts saved to reports/
+- Update README.md with architecture, flow diagrams, and business use cases.

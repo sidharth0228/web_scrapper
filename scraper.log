@@ -1,0 +1,233 @@
+2026-06-01 20:39:55,098 [INFO] [scraper.py:67] - Resilient Logging Engine initialized successfully.
+2026-06-01 20:39:55,099 [INFO] [scraper.py:96] - HTTP Session initialized with Max Retries=5, Backoff Factor=1.0s.
+2026-06-01 20:39:55,099 [INFO] [scraper.py:310] - Starting Startup & Manufacturer Directory Scraper engine.
+2026-06-01 20:39:55,099 [INFO] [scraper.py:277] - ------------------------------------------------------------
+2026-06-01 20:39:55,099 [INFO] [scraper.py:278] -  STARTING SIMULATED EXCEPTION RESILIENCE LABS                
+2026-06-01 20:39:55,100 [INFO] [scraper.py:279] - ------------------------------------------------------------
+2026-06-01 20:39:55,100 [INFO] [scraper.py:282] - TEST CASE 1: Contacting Rate Limiting endpoint (/simulate-429)...
+2026-06-01 20:39:55,101 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/simulate-429
+2026-06-01 20:40:09,306 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/simulate-429
+2026-06-01 20:40:09,307 [INFO] [scraper.py:285] - Test Case 1 SUCCESS: Retry adapter recovered from 429 errors successfully.
+2026-06-01 20:40:09,307 [INFO] [scraper.py:290] - TEST CASE 2: Contacting Server Downtime endpoint (/simulate-500)...
+2026-06-01 20:40:09,308 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/simulate-500
+2026-06-01 20:40:17,437 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/simulate-500
+2026-06-01 20:40:17,438 [INFO] [scraper.py:293] - Test Case 2 SUCCESS: Retry adapter recovered from 500 downtime successfully.
+2026-06-01 20:40:17,438 [INFO] [scraper.py:297] - ------------------------------------------------------------
+2026-06-01 20:40:17,438 [INFO] [scraper.py:298] -  SIMULATION TESTS COMPLETED. STARTING DIRECTORY SCRAPING.   
+2026-06-01 20:40:17,438 [INFO] [scraper.py:299] - ------------------------------------------------------------
+2026-06-01 20:40:17,438 [INFO] [scraper.py:324] - --- Processing Page 1 ---
+2026-06-01 20:40:17,439 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/1
+2026-06-01 20:40:19,789 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/1
+2026-06-01 20:40:19,825 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:19,829 [DEBUG] [scraper.py:197] - Parsed Company: Apex Robotics | Industry: Robotics & Automation | Location: Boston, MA
+2026-06-01 20:40:19,830 [DEBUG] [scraper.py:197] - Parsed Company: NextGen EV | Industry: Automotive & EV | Location: Munich, Germany
+2026-06-01 20:40:19,831 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Bio | Industry: Biotechnology | Location: San Francisco, CA
+2026-06-01 20:40:19,832 [DEBUG] [scraper.py:197] - Parsed Company: Summit Laboratories | Industry: Robotics & Automation | Location: Toronto, Canada
+2026-06-01 20:40:19,833 [DEBUG] [scraper.py:197] - Parsed Company: Eco Electric | Industry: Automotive & EV | Location: Boston, MA
+2026-06-01 20:40:19,837 [DEBUG] [scraper.py:197] - Parsed Company: Omni Technologies | Industry: IoT Solutions | Location: Denver, CO
+2026-06-01 20:40:19,838 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Dynamics | Industry: Biotechnology | Location: London, UK
+2026-06-01 20:40:19,839 [DEBUG] [scraper.py:197] - Parsed Company: Omni Dynamics | Industry: Automotive & EV | Location: Tokyo, Japan
+2026-06-01 20:40:19,840 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Manufacturing | Industry: Cybersecurity Systems | Location: Berlin, Germany
+2026-06-01 20:40:19,841 [DEBUG] [scraper.py:197] - Parsed Company: Apex Solutions | Industry: Automotive & EV | Location: Denver, CO
+2026-06-01 20:40:19,842 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Dynamics | Industry: Quantum Computing | Location: Chicago, IL
+2026-06-01 20:40:19,843 [DEBUG] [scraper.py:197] - Parsed Company: Helix Laboratories | Industry: AI & Machine Learning | Location: Munich, Germany
+2026-06-01 20:40:19,845 [DEBUG] [scraper.py:197] - Parsed Company: Neo Systems | Industry: Automotive & EV | Location: Los Angeles, CA
+2026-06-01 20:40:19,846 [DEBUG] [scraper.py:197] - Parsed Company: Helix Technologies | Industry: Aerospace & Defense | Location: New York, NY
+2026-06-01 20:40:19,847 [DEBUG] [scraper.py:197] - Parsed Company: Vector Labs | Industry: IoT Solutions | Location: Seattle, WA
+2026-06-01 20:40:19,848 [INFO] [scraper.py:333] - Page 1: Parsed 15 validated business records.
+2026-06-01 20:40:19,956 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/2
+2026-06-01 20:40:20,457 [INFO] [scraper.py:324] - --- Processing Page 2 ---
+2026-06-01 20:40:20,457 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/2
+2026-06-01 20:40:22,596 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/2
+2026-06-01 20:40:22,630 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:22,631 [DEBUG] [scraper.py:197] - Parsed Company: Aether Silicon | Industry: Biotechnology | Location: Singapore
+2026-06-01 20:40:22,632 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Manufacturing | Industry: MedTech Devices | Location: Boston, MA
+2026-06-01 20:40:22,633 [DEBUG] [scraper.py:197] - Parsed Company: Vortex Computing | Industry: MedTech Devices | Location: Chicago, IL
+2026-06-01 20:40:22,636 [DEBUG] [scraper.py:197] - Parsed Company: Zenith Dynamics | Industry: Logistics & Supply Chain | Location: New York, NY
+2026-06-01 20:40:22,637 [DEBUG] [scraper.py:197] - Parsed Company: Nexus Computing | Industry: Advanced Manufacturing | Location: Berlin, Germany
+2026-06-01 20:40:22,638 [DEBUG] [scraper.py:197] - Parsed Company: Omni Manufacturing | Industry: FinTech Infrastructure | Location: Los Angeles, CA
+2026-06-01 20:40:22,640 [DEBUG] [scraper.py:197] - Parsed Company: Summit Logistics | Industry: Biotechnology | Location: Tokyo, Japan
+2026-06-01 20:40:22,641 [DEBUG] [scraper.py:197] - Parsed Company: Aether Manufacturing | Industry: MedTech Devices | Location: San Francisco, CA
+2026-06-01 20:40:22,642 [DEBUG] [scraper.py:197] - Parsed Company: Helix Energy | Industry: Advanced Manufacturing | Location: Seattle, WA
+2026-06-01 20:40:22,643 [DEBUG] [scraper.py:197] - Parsed Company: Prism Networks | Industry: Biotechnology | Location: Tokyo, Japan
+2026-06-01 20:40:22,645 [DEBUG] [scraper.py:197] - Parsed Company: Summit Biotech | Industry: FinTech Infrastructure | Location: New York, NY
+2026-06-01 20:40:22,646 [DEBUG] [scraper.py:197] - Parsed Company: Pulse Logistics | Industry: Aerospace & Defense | Location: New York, NY
+2026-06-01 20:40:22,647 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Devices | Industry: Enterprise SaaS | Location: Chicago, IL
+2026-06-01 20:40:22,648 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Automotive | Industry: Cybersecurity Systems | Location: Boston, MA
+2026-06-01 20:40:22,650 [DEBUG] [scraper.py:197] - Parsed Company: Nova Electric | Industry: Logistics & Supply Chain | Location: Austin, TX
+2026-06-01 20:40:22,650 [INFO] [scraper.py:333] - Page 2: Parsed 15 validated business records.
+2026-06-01 20:40:22,689 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/3
+2026-06-01 20:40:23,189 [INFO] [scraper.py:324] - --- Processing Page 3 ---
+2026-06-01 20:40:23,190 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/3
+2026-06-01 20:40:25,243 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/3
+2026-06-01 20:40:25,276 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:25,277 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Aero | Industry: Advanced Manufacturing | Location: Denver, CO
+2026-06-01 20:40:25,278 [DEBUG] [scraper.py:197] - Parsed Company: Vortex Automotive | Industry: Clean Energy & Grid | Location: London, UK
+2026-06-01 20:40:25,279 [DEBUG] [scraper.py:197] - Parsed Company: Apex Silicon | Industry: Automotive & EV | Location: Boston, MA
+2026-06-01 20:40:25,280 [DEBUG] [scraper.py:197] - Parsed Company: Omni Energy | Industry: Quantum Computing | Location: Tokyo, Japan
+2026-06-01 20:40:25,281 [DEBUG] [scraper.py:197] - Parsed Company: Core Cyber | Industry: FinTech Infrastructure | Location: Los Angeles, CA
+2026-06-01 20:40:25,282 [DEBUG] [scraper.py:197] - Parsed Company: Pulse Energy | Industry: Aerospace & Defense | Location: Singapore
+2026-06-01 20:40:25,285 [DEBUG] [scraper.py:197] - Parsed Company: Nova Computing | Industry: Clean Energy & Grid | Location: Munich, Germany
+2026-06-01 20:40:25,287 [DEBUG] [scraper.py:197] - Parsed Company: Vector Dynamics | Industry: FinTech Infrastructure | Location: Chicago, IL
+2026-06-01 20:40:25,289 [DEBUG] [scraper.py:197] - Parsed Company: Omni Automotive | Industry: Semicondictor Materials | Location: San Francisco, CA
+2026-06-01 20:40:25,290 [DEBUG] [scraper.py:197] - Parsed Company: Horizon Robotics | Industry: Advanced Manufacturing | Location: Paris, France
+2026-06-01 20:40:25,291 [DEBUG] [scraper.py:197] - Parsed Company: Core Manufacturing | Industry: Robotics & Automation | Location: Seattle, WA
+2026-06-01 20:40:25,292 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Technologies | Industry: Automotive & EV | Location: Los Angeles, CA
+2026-06-01 20:40:25,292 [DEBUG] [scraper.py:197] - Parsed Company: Omni Electric | Industry: FinTech Infrastructure | Location: Tokyo, Japan
+2026-06-01 20:40:25,293 [DEBUG] [scraper.py:197] - Parsed Company: Omni Solutions | Industry: Clean Energy & Grid | Location: London, UK
+2026-06-01 20:40:25,294 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Dynamics | Industry: Semicondictor Materials | Location: London, UK
+2026-06-01 20:40:25,294 [INFO] [scraper.py:333] - Page 3: Parsed 15 validated business records.
+2026-06-01 20:40:25,330 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/4
+2026-06-01 20:40:25,832 [INFO] [scraper.py:324] - --- Processing Page 4 ---
+2026-06-01 20:40:25,832 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/4
+2026-06-01 20:40:27,866 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/4
+2026-06-01 20:40:27,902 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:27,903 [DEBUG] [scraper.py:197] - Parsed Company: Solaria Dynamics | Industry: Automotive & EV | Location: New York, NY
+2026-06-01 20:40:27,904 [DEBUG] [scraper.py:197] - Parsed Company: Zenith Biotech | Industry: Semicondictor Materials | Location: London, UK
+2026-06-01 20:40:27,905 [DEBUG] [scraper.py:197] - Parsed Company: Eco Manufacturing | Industry: Advanced Manufacturing | Location: Chicago, IL
+2026-06-01 20:40:27,906 [DEBUG] [scraper.py:197] - Parsed Company: Prism Manufacturing | Industry: Robotics & Automation | Location: Boston, MA
+2026-06-01 20:40:27,908 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Systems | Industry: MedTech Devices | Location: Chicago, IL
+2026-06-01 20:40:27,909 [DEBUG] [scraper.py:197] - Parsed Company: Eco Energy | Industry: Logistics & Supply Chain | Location: Los Angeles, CA
+2026-06-01 20:40:27,910 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Devices | Industry: IoT Solutions | Location: Los Angeles, CA
+2026-06-01 20:40:27,911 [DEBUG] [scraper.py:197] - Parsed Company: Horizon Cyber | Industry: Biotechnology | Location: Boston, MA
+2026-06-01 20:40:27,913 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Labs | Industry: Enterprise SaaS | Location: Denver, CO
+2026-06-01 20:40:27,914 [DEBUG] [scraper.py:197] - Parsed Company: Pulse Systems | Industry: Logistics & Supply Chain | Location: Tokyo, Japan
+2026-06-01 20:40:27,915 [DEBUG] [scraper.py:197] - Parsed Company: Nova Systems | Industry: Enterprise SaaS | Location: Toronto, Canada
+2026-06-01 20:40:27,916 [DEBUG] [scraper.py:197] - Parsed Company: Nova Manufacturing | Industry: Biotechnology | Location: Seattle, WA
+2026-06-01 20:40:27,917 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Cyber | Industry: FinTech Infrastructure | Location: New York, NY
+2026-06-01 20:40:27,918 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Biotech | Industry: Quantum Computing | Location: Munich, Germany
+2026-06-01 20:40:27,919 [DEBUG] [scraper.py:197] - Parsed Company: Apex Technologies | Industry: Semicondictor Materials | Location: Singapore
+2026-06-01 20:40:27,920 [INFO] [scraper.py:333] - Page 4: Parsed 15 validated business records.
+2026-06-01 20:40:27,956 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/5
+2026-06-01 20:40:28,508 [INFO] [scraper.py:324] - --- Processing Page 5 ---
+2026-06-01 20:40:28,510 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/5
+2026-06-01 20:40:30,691 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/5
+2026-06-01 20:40:30,728 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:30,729 [DEBUG] [scraper.py:197] - Parsed Company: Quantum Cyber | Industry: Cybersecurity Systems | Location: Los Angeles, CA
+2026-06-01 20:40:30,730 [DEBUG] [scraper.py:197] - Parsed Company: Helix Systems | Industry: FinTech Infrastructure | Location: Denver, CO
+2026-06-01 20:40:30,732 [DEBUG] [scraper.py:197] - Parsed Company: Vortex Analytics | Industry: Enterprise SaaS | Location: Toronto, Canada
+2026-06-01 20:40:30,735 [DEBUG] [scraper.py:197] - Parsed Company: Omni Silicon | Industry: Automotive & EV | Location: Los Angeles, CA
+2026-06-01 20:40:30,736 [DEBUG] [scraper.py:197] - Parsed Company: Core Dynamics | Industry: Robotics & Automation | Location: Berlin, Germany
+2026-06-01 20:40:30,737 [DEBUG] [scraper.py:197] - Parsed Company: Aether Networks | Industry: Robotics & Automation | Location: San Francisco, CA
+2026-06-01 20:40:30,738 [DEBUG] [scraper.py:197] - Parsed Company: Krypton Automotive | Industry: FinTech Infrastructure | Location: San Francisco, CA
+2026-06-01 20:40:30,740 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Solutions | Industry: Advanced Manufacturing | Location: Berlin, Germany
+2026-06-01 20:40:30,741 [DEBUG] [scraper.py:197] - Parsed Company: Eco Industries | Industry: Advanced Manufacturing | Location: Paris, France
+2026-06-01 20:40:30,742 [DEBUG] [scraper.py:197] - Parsed Company: Prism Aero | Industry: Robotics & Automation | Location: Berlin, Germany
+2026-06-01 20:40:30,743 [DEBUG] [scraper.py:197] - Parsed Company: Nexus Devices | Industry: IoT Solutions | Location: London, UK
+2026-06-01 20:40:30,744 [DEBUG] [scraper.py:197] - Parsed Company: Neo Dynamics | Industry: Logistics & Supply Chain | Location: Toronto, Canada
+2026-06-01 20:40:30,745 [DEBUG] [scraper.py:197] - Parsed Company: Neo Industries | Industry: FinTech Infrastructure | Location: Tokyo, Japan
+2026-06-01 20:40:30,746 [DEBUG] [scraper.py:197] - Parsed Company: Vortex Networks | Industry: Semicondictor Materials | Location: Singapore
+2026-06-01 20:40:30,748 [DEBUG] [scraper.py:197] - Parsed Company: Apex Biotech | Industry: IoT Solutions | Location: Berlin, Germany
+2026-06-01 20:40:30,748 [INFO] [scraper.py:333] - Page 5: Parsed 15 validated business records.
+2026-06-01 20:40:30,962 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/6
+2026-06-01 20:40:31,592 [INFO] [scraper.py:324] - --- Processing Page 6 ---
+2026-06-01 20:40:31,594 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/6
+2026-06-01 20:40:33,788 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/6
+2026-06-01 20:40:33,826 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:33,827 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Logistics | Industry: Biotechnology | Location: London, UK
+2026-06-01 20:40:33,829 [DEBUG] [scraper.py:197] - Parsed Company: Zenith Technologies | Industry: Semicondictor Materials | Location: Seattle, WA
+2026-06-01 20:40:33,830 [DEBUG] [scraper.py:197] - Parsed Company: Quantum Biotech | Industry: MedTech Devices | Location: London, UK
+2026-06-01 20:40:33,830 [DEBUG] [scraper.py:197] - Parsed Company: Vector Computing | Industry: Aerospace & Defense | Location: San Francisco, CA
+2026-06-01 20:40:33,834 [DEBUG] [scraper.py:197] - Parsed Company: Omni Analytics | Industry: Semicondictor Materials | Location: Tokyo, Japan
+2026-06-01 20:40:33,835 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Energy | Industry: Advanced Manufacturing | Location: Paris, France
+2026-06-01 20:40:33,836 [DEBUG] [scraper.py:197] - Parsed Company: Neo Analytics | Industry: IoT Solutions | Location: Seattle, WA
+2026-06-01 20:40:33,837 [DEBUG] [scraper.py:197] - Parsed Company: Bio Silicon | Industry: Logistics & Supply Chain | Location: Munich, Germany
+2026-06-01 20:40:33,839 [DEBUG] [scraper.py:197] - Parsed Company: Horizon Energy | Industry: Semicondictor Materials | Location: Paris, France
+2026-06-01 20:40:33,840 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Computing | Industry: Enterprise SaaS | Location: Munich, Germany
+2026-06-01 20:40:33,840 [DEBUG] [scraper.py:197] - Parsed Company: Apex Networks | Industry: Quantum Computing | Location: Austin, TX
+2026-06-01 20:40:33,842 [DEBUG] [scraper.py:197] - Parsed Company: Neo Solutions | Industry: Automotive & EV | Location: Los Angeles, CA
+2026-06-01 20:40:33,843 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Logistics | Industry: Robotics & Automation | Location: Boston, MA
+2026-06-01 20:40:33,844 [DEBUG] [scraper.py:197] - Parsed Company: Solaria Electric | Industry: Aerospace & Defense | Location: San Francisco, CA
+2026-06-01 20:40:33,845 [DEBUG] [scraper.py:197] - Parsed Company: Prism Logistics | Industry: FinTech Infrastructure | Location: Denver, CO
+2026-06-01 20:40:33,845 [INFO] [scraper.py:333] - Page 6: Parsed 15 validated business records.
+2026-06-01 20:40:33,983 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/7
+2026-06-01 20:40:34,486 [INFO] [scraper.py:324] - --- Processing Page 7 ---
+2026-06-01 20:40:34,486 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/7
+2026-06-01 20:40:36,725 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/7
+2026-06-01 20:40:36,755 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:36,756 [DEBUG] [scraper.py:197] - Parsed Company: Core Labs | Industry: Semicondictor Materials | Location: Paris, France
+2026-06-01 20:40:36,757 [DEBUG] [scraper.py:197] - Parsed Company: Aether Labs | Industry: Biotechnology | Location: Tokyo, Japan
+2026-06-01 20:40:36,758 [DEBUG] [scraper.py:197] - Parsed Company: Nova Labs | Industry: Quantum Computing | Location: London, UK
+2026-06-01 20:40:36,759 [DEBUG] [scraper.py:197] - Parsed Company: Pulse Electric | Industry: Semicondictor Materials | Location: Paris, France
+2026-06-01 20:40:36,760 [DEBUG] [scraper.py:197] - Parsed Company: Quantum Solutions | Industry: Semicondictor Materials | Location: Denver, CO
+2026-06-01 20:40:36,761 [DEBUG] [scraper.py:197] - Parsed Company: Pulse Networks | Industry: Quantum Computing | Location: Paris, France
+2026-06-01 20:40:36,762 [DEBUG] [scraper.py:197] - Parsed Company: Nexus Manufacturing | Industry: Clean Energy & Grid | Location: Austin, TX
+2026-06-01 20:40:36,763 [DEBUG] [scraper.py:197] - Parsed Company: Nova Industries | Industry: MedTech Devices | Location: San Francisco, CA
+2026-06-01 20:40:36,766 [DEBUG] [scraper.py:197] - Parsed Company: Eco Dynamics | Industry: MedTech Devices | Location: Paris, France
+2026-06-01 20:40:36,768 [DEBUG] [scraper.py:197] - Parsed Company: Eco Robotics | Industry: Logistics & Supply Chain | Location: Seattle, WA
+2026-06-01 20:40:36,769 [DEBUG] [scraper.py:197] - Parsed Company: Neo Technologies | Industry: Quantum Computing | Location: New York, NY
+2026-06-01 20:40:36,771 [DEBUG] [scraper.py:197] - Parsed Company: Krypton Industries | Industry: Logistics & Supply Chain | Location: Munich, Germany
+2026-06-01 20:40:36,772 [DEBUG] [scraper.py:197] - Parsed Company: Apex Laboratories | Industry: Semicondictor Materials | Location: New York, NY
+2026-06-01 20:40:36,773 [DEBUG] [scraper.py:197] - Parsed Company: Nova Aero | Industry: Enterprise SaaS | Location: Chicago, IL
+2026-06-01 20:40:36,774 [DEBUG] [scraper.py:197] - Parsed Company: Optima Cyber | Industry: IoT Solutions | Location: London, UK
+2026-06-01 20:40:36,774 [INFO] [scraper.py:333] - Page 7: Parsed 15 validated business records.
+2026-06-01 20:40:36,837 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/8
+2026-06-01 20:40:37,338 [INFO] [scraper.py:324] - --- Processing Page 8 ---
+2026-06-01 20:40:37,339 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/8
+2026-06-01 20:40:39,386 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/8
+2026-06-01 20:40:39,420 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:39,422 [DEBUG] [scraper.py:197] - Parsed Company: Prism Dynamics | Industry: Clean Energy & Grid | Location: San Francisco, CA
+2026-06-01 20:40:39,423 [DEBUG] [scraper.py:197] - Parsed Company: Apex Automotive | Industry: Semicondictor Materials | Location: Singapore
+2026-06-01 20:40:39,424 [DEBUG] [scraper.py:197] - Parsed Company: Pulse Silicon | Industry: Biotechnology | Location: Chicago, IL
+2026-06-01 20:40:39,425 [DEBUG] [scraper.py:197] - Parsed Company: Nexus Networks | Industry: IoT Solutions | Location: Chicago, IL
+2026-06-01 20:40:39,426 [DEBUG] [scraper.py:197] - Parsed Company: Nova Analytics | Industry: Aerospace & Defense | Location: New York, NY
+2026-06-01 20:40:39,427 [DEBUG] [scraper.py:197] - Parsed Company: Optima Industries | Industry: Automotive & EV | Location: New York, NY
+2026-06-01 20:40:39,428 [DEBUG] [scraper.py:197] - Parsed Company: Bio Cyber | Industry: Logistics & Supply Chain | Location: Denver, CO
+2026-06-01 20:40:39,429 [DEBUG] [scraper.py:197] - Parsed Company: Quantum Aero | Industry: IoT Solutions | Location: New York, NY
+2026-06-01 20:40:39,431 [DEBUG] [scraper.py:197] - Parsed Company: Apex Analytics | Industry: Clean Energy & Grid | Location: Seattle, WA
+2026-06-01 20:40:39,433 [DEBUG] [scraper.py:197] - Parsed Company: Summit Networks | Industry: Cybersecurity Systems | Location: Los Angeles, CA
+2026-06-01 20:40:39,434 [DEBUG] [scraper.py:197] - Parsed Company: Bio Automotive | Industry: Cybersecurity Systems | Location: Singapore
+2026-06-01 20:40:39,435 [DEBUG] [scraper.py:197] - Parsed Company: Pulse Solutions | Industry: Logistics & Supply Chain | Location: Boston, MA
+2026-06-01 20:40:39,436 [DEBUG] [scraper.py:197] - Parsed Company: Vector Networks | Industry: Advanced Manufacturing | Location: Munich, Germany
+2026-06-01 20:40:39,437 [DEBUG] [scraper.py:197] - Parsed Company: Eco Silicon | Industry: Clean Energy & Grid | Location: Seattle, WA
+2026-06-01 20:40:39,438 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Robotics | Industry: Robotics & Automation | Location: Seattle, WA
+2026-06-01 20:40:39,439 [INFO] [scraper.py:333] - Page 8: Parsed 15 validated business records.
+2026-06-01 20:40:39,475 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/9
+2026-06-01 20:40:39,976 [INFO] [scraper.py:324] - --- Processing Page 9 ---
+2026-06-01 20:40:39,977 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/9
+2026-06-01 20:40:42,012 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/9
+2026-06-01 20:40:42,342 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:42,343 [DEBUG] [scraper.py:197] - Parsed Company: Vector Technologies | Industry: Cybersecurity Systems | Location: Denver, CO
+2026-06-01 20:40:42,344 [DEBUG] [scraper.py:197] - Parsed Company: Solaria Industries | Industry: Cybersecurity Systems | Location: Denver, CO
+2026-06-01 20:40:42,345 [DEBUG] [scraper.py:197] - Parsed Company: Summit Robotics | Industry: Semicondictor Materials | Location: Singapore
+2026-06-01 20:40:42,348 [DEBUG] [scraper.py:197] - Parsed Company: Nova Cyber | Industry: Biotechnology | Location: Austin, TX
+2026-06-01 20:40:42,349 [DEBUG] [scraper.py:197] - Parsed Company: Solaria Automotive | Industry: Cybersecurity Systems | Location: San Francisco, CA
+2026-06-01 20:40:42,351 [DEBUG] [scraper.py:197] - Parsed Company: Nova Biotech | Industry: FinTech Infrastructure | Location: Singapore
+2026-06-01 20:40:42,351 [DEBUG] [scraper.py:197] - Parsed Company: Krypton Logistics | Industry: IoT Solutions | Location: Chicago, IL
+2026-06-01 20:40:42,352 [DEBUG] [scraper.py:197] - Parsed Company: Vortex Aero | Industry: MedTech Devices | Location: Toronto, Canada
+2026-06-01 20:40:42,353 [DEBUG] [scraper.py:197] - Parsed Company: Vortex Solutions | Industry: Automotive & EV | Location: Munich, Germany
+2026-06-01 20:40:42,353 [DEBUG] [scraper.py:197] - Parsed Company: Neo Manufacturing | Industry: MedTech Devices | Location: Tokyo, Japan
+2026-06-01 20:40:42,355 [DEBUG] [scraper.py:197] - Parsed Company: Krypton Instruments | Industry: Logistics & Supply Chain | Location: Seattle, WA
+2026-06-01 20:40:42,356 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Analytics | Industry: Biotechnology | Location: New York, NY
+2026-06-01 20:40:42,356 [DEBUG] [scraper.py:197] - Parsed Company: Stellar Electric | Industry: Biotechnology | Location: Denver, CO
+2026-06-01 20:40:42,357 [DEBUG] [scraper.py:197] - Parsed Company: Veloce Cyber | Industry: Enterprise SaaS | Location: Chicago, IL
+2026-06-01 20:40:42,357 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Systems | Industry: Biotechnology | Location: Munich, Germany
+2026-06-01 20:40:42,357 [INFO] [scraper.py:333] - Page 9: Parsed 15 validated business records.
+2026-06-01 20:40:42,400 [INFO] [scraper.py:344] - Pagination: Next Page link detected: /page/10
+2026-06-01 20:40:42,900 [INFO] [scraper.py:324] - --- Processing Page 10 ---
+2026-06-01 20:40:42,901 [INFO] [scraper.py:111] - Connecting to URL: http://localhost:8000/page/10
+2026-06-01 20:40:44,953 [INFO] [scraper.py:118] - HTTP Response Code: 200 for URL: http://localhost:8000/page/10
+2026-06-01 20:40:44,994 [INFO] [scraper.py:222] - Located 15 company cards in current HTML payload.
+2026-06-01 20:40:44,997 [DEBUG] [scraper.py:197] - Parsed Company: Prism Robotics | Industry: MedTech Devices | Location: Paris, France
+2026-06-01 20:40:44,998 [DEBUG] [scraper.py:197] - Parsed Company: Helix Instruments | Industry: Robotics & Automation | Location: Chicago, IL
+2026-06-01 20:40:45,001 [DEBUG] [scraper.py:197] - Parsed Company: Helix Cyber | Industry: Aerospace & Defense | Location: Toronto, Canada
+2026-06-01 20:40:45,003 [DEBUG] [scraper.py:197] - Parsed Company: Vector Manufacturing | Industry: Cybersecurity Systems | Location: Seattle, WA
+2026-06-01 20:40:45,005 [DEBUG] [scraper.py:197] - Parsed Company: Helix Networks | Industry: Logistics & Supply Chain | Location: Tokyo, Japan
+2026-06-01 20:40:45,006 [DEBUG] [scraper.py:197] - Parsed Company: Vortex Electric | Industry: IoT Solutions | Location: London, UK
+2026-06-01 20:40:45,009 [DEBUG] [scraper.py:197] - Parsed Company: Helix Devices | Industry: IoT Solutions | Location: Tokyo, Japan
+2026-06-01 20:40:45,011 [DEBUG] [scraper.py:197] - Parsed Company: Summit Cyber | Industry: FinTech Infrastructure | Location: Munich, Germany
+2026-06-01 20:40:45,012 [DEBUG] [scraper.py:197] - Parsed Company: Aether Energy | Industry: Enterprise SaaS | Location: Chicago, IL
+2026-06-01 20:40:45,013 [DEBUG] [scraper.py:197] - Parsed Company: Optima Networks | Industry: Quantum Computing | Location: Paris, France
+2026-06-01 20:40:45,015 [DEBUG] [scraper.py:197] - Parsed Company: Sentry Energy | Industry: MedTech Devices | Location: Boston, MA
+2026-06-01 20:40:45,016 [DEBUG] [scraper.py:197] - Parsed Company: Eco Computing | Industry: Advanced Manufacturing | Location: Singapore
+2026-06-01 20:40:45,017 [DEBUG] [scraper.py:197] - Parsed Company: Aether Robotics | Industry: Biotechnology | Location: Seattle, WA
+2026-06-01 20:40:45,018 [DEBUG] [scraper.py:197] - Parsed Company: Vector Electric | Industry: Biotechnology | Location: Austin, TX
+2026-06-01 20:40:45,019 [DEBUG] [scraper.py:197] - Parsed Company: Nova Devices | Industry: Biotechnology | Location: Los Angeles, CA
+2026-06-01 20:40:45,019 [INFO] [scraper.py:333] - Page 10: Parsed 15 validated business records.
+2026-06-01 20:40:45,080 [INFO] [scraper.py:349] - Pagination: No 'Next Page' link detected. Reached end of directory listing.
+2026-06-01 20:40:45,082 [INFO] [scraper.py:242] - Loaded 150 raw records into memory.
+2026-06-01 20:40:45,213 [INFO] [scraper.py:264] - ============================================================
+2026-06-01 20:40:45,213 [INFO] [scraper.py:265] -  DATA SAVED SUCCESSFULLY                                    
+2026-06-01 20:40:45,213 [INFO] [scraper.py:266] -  File Location: C:\Users\SIDHARTH\OneDrive\Desktop\Scrapper\startup-directory-scraper\output\company_directory.csv                    
+2026-06-01 20:40:45,213 [INFO] [scraper.py:267] -  Total Extracted Listings: 150 records                
+2026-06-01 20:40:45,213 [INFO] [scraper.py:268] - ============================================================

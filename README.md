@@ -1,4 +1,3 @@
-# web_scrapper
 # Startup & Manufacturer Business Intelligence Engine
 
 An enterprise-grade, portfolio-ready data engineering platform that transforms unstructured directory data into structured Business Intelligence.
